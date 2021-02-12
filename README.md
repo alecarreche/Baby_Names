@@ -14,4 +14,4 @@ This script prepares the dataset from the `.zip` file in `INPUT_FILE` into a SQL
 
 `julia plot.jl [DATABASE_FILE] [NAME] [SEX]`
 
-This script opens the SQLite database in `DATABASE_FILE` and makes a query for year and number of babies born with the given `NAME` and `SEX`. Both of these parametsrs are case insensitive, but `SEX` must take the values of `m` or `f`. After quierying the database, a resultant plot is displayed showing the name populatirty over time, with plot colored determed by sex. 
+This script opens the SQLite database in `DATABASE_FILE` and makes a query for year and number of babies born with the given `NAME` and `SEX`. Both of these parametsrs are case insensitive, but `SEX` must take the values of `m` or `f`. After quierying the database, a resultant plot is displayed showing the name popularity over time, with plot color determined by sex. 
