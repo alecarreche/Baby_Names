@@ -8,10 +8,10 @@ then plot the popularity of a given baby name over time.
 
 `julia prepare.jl [INPUT_FILE] [OUTPUT_FILE]`
 
-This script prepares the dataset from the `.zip` file in `INPUT_FILE` into a SQLite `.db` file named `OUTPUT_FILE`. Once opening the compressed `INPUT_FILE`, files following the format `yob*.txt` are parsed and inserted into the directory using prepared SQLite statements. 
+This script prepares the dataset from the `.zip` file in `INPUT_FILE` into a SQLite `.db` file named `OUTPUT_FILE`. Once opening the compressed `INPUT_FILE`, files following the format `yob*.txt` are parsed and inserted into the database using prepared SQLite statements. 
 
 ## plot.jl
 
 `julia plot.jl [DATABASE_FILE] [NAME] [SEX]`
 
-This script opens the SQLite database in `DATABASE_FILE` and makes a query for year and number of babies born with the given `NAME` and `SEX`. Both of these parametsrs are case insensitive, but `SEX` must take the values of `m` or `f`. After quierying the database, a resultant plot is displayed showing the name popularity over time, with plot color determined by sex. 
+This script opens the SQLite database in `DATABASE_FILE` and makes a query for year and number of babies born with the given `NAME` and `SEX`. Both of these parametsrs are case insensitive, but `SEX` must take the values of `m` or `f`. After querying the database, a resultant plot is displayed showing the name popularity over time, with plot color determined by sex. 
