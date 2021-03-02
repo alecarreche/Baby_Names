@@ -5,6 +5,7 @@
 `julia similar_names.jl`
 
 **Note on Parallelization:**
+
 In part 9, the computation of dot products is performed using matrix multiplication instead of individual dot product computation. 
 By using matrix multiplication using the `mul!` function in the LinearAlgebra library, we are able to access the benefits 
 of the multithreading used in the BLAS implementation without explicitely using multithreading in our code. 
