@@ -100,11 +100,15 @@ push!(Qg_sections, Qg[b_size*9+1:Ng, :])
 
 glob_max = 0
 max_coord = CartesianIndex(0,0)
+a = zeros(10)
 # multiply
+BLAS.set_num_threads(8) # ensure multithreading
 @time begin
     for i in 1:10
         for j in 1:10
             result = Array{Float64}(undef, size(Qb_sections[i])[1], size(Qg_sections[j])[1])
+
+            # no need to use threads here because BLAS already uses multithreading for matmult
             mul!(result, Qb_sections[i], transpose(Qg_sections[j]))
             loc_max = maximum(result)
             
